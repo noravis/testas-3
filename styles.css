@@ -1,0 +1,85 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    background-color:#d2e5fd;
+    width: 800px;
+    height: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+}
+.formos-blokas {
+    background-color: #fdfeff;
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+
+.formos-blokas::before {
+    content: "Get in touch";
+    color: #233bf5;
+    font-size: 30px;
+    font-weight: 300;
+}
+label {
+    display: none;
+}
+.form {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas: "name l-name"
+    "email phone"
+    "address address"
+    "msg msg"
+}
+#form-first-name {
+    grid-area: name;
+    background-color: #e6e9fe;
+}
+#form-last-name {
+    grid-area: l-name;
+    background-color: #e6e9fe;
+}
+#form-email {
+    grid-area: email;
+    background-color: #dce0ff;
+}
+#form-phone {
+    grid-area: phone;
+    background-color: #dce0ff;
+}
+#form-address {
+    grid-area: address;
+    background-color: #c7cdfc;
+}
+#form-msg {
+    grid-area: msg;
+    background-color: #a4b2fd;
+    max-width: 600px;
+}
+.blokelis {
+    line-height: 40px;
+    border-radius: 7px;
+    border: none;
+}
+
+::placeholder {
+    color: #223bf5;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
