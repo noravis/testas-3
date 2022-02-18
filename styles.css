@@ -22,24 +22,40 @@ body {
 .formos-blokas {
     background-color: #fdfeff;
     width: 600px;
-    height: 600px;
+    height: 550px;
     margin-left: auto;
     margin-right: auto;
-    padding: 50px;
+    padding: 60px;
+}
+.form {
+    margin-top: 10%;
 }
 
 .formos-blokas::before {
     content: "Get in touch";
-    color: #233bf5;
-    font-size: 30px;
+    color: #323ca8;
+    font-size: 35px;
     font-weight: 300;
+    position: absolute;
+    text-transform: capitalize;
+    top: 90px;
+}
+.formos-blokas::after {
+    content: "Thanks for submitting!";
+    color: #81d8be;
+    font-size: 15px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 130px;
+    left: 465px;
 }
 label {
     display: none;
 }
 .form {
+    position: relative;
     display: grid; 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     gap: 20px;
     grid-template-areas: "name l-name"
     "email phone"
@@ -69,17 +85,39 @@ label {
 #form-msg {
     grid-area: msg;
     background-color: #a4b2fd;
-    max-width: 600px;
+    resize: none;
 }
 .blokelis {
-    line-height: 40px;
+    line-height: 50px;
     border-radius: 7px;
     border: none;
 }
 
 ::placeholder {
-    color: #223bf5;
+    color: #323ca8;
     padding: 20px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
+}
+#form-msg::placeholder {
+    padding-top: 0px;
+}
+#form-first-name::placeholder {
+    text-transform: capitalize;
+}
+#form-last-name::placeholder {
+    text-transform: capitalize;
+}
+
+.button {
+    background-color: #223bf5;
+    color: #fff;
+    width: 50%;
+    border-radius: 25px;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    text-align: center;
+    margin-left: 75%;
 }
